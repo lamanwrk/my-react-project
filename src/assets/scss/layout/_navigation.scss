@@ -1,0 +1,19 @@
+nav {
+  margin: 0 auto;
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    a {
+      color: white;
+      text-decoration-line: none;
+      font-family: "Cormorant";
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 400;
+      &.active {
+        color: #c19f5f;
+      }
+    }
+  }
+}

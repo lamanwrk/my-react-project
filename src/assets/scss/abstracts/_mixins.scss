@@ -1,0 +1,36 @@
+@mixin flex-center($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin generalStyle() {
+  content: "";
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+}
+@mixin p() {
+  line-height: 27px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+@mixin size-t() {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@mixin size-p() {
+  font-size: 1.4vw;
+  font-weight: 500;
+  line-height: 24px;
+}
+@mixin h() {
+  font-weight: 500;
+  line-height: 78px;
+  font-size: 4.5vw;
+}

@@ -1,0 +1,434 @@
+// firstsection
+.changeimg {
+  height: 100vh;
+  display: flex;
+  .img {
+    width: 100%;
+  }
+  .left {
+    width: 15.4px;
+    height: 30px;
+    position: absolute;
+    top: calc(100vh / 2);
+    left: 21vw;
+    z-index: 100000;
+  }
+  .right {
+    position: absolute;
+    top: calc(100vh / 2);
+    right: 21vw;
+    z-index: 100000;
+  }
+  .text {
+    position: absolute;
+    gap: 0;
+    @include flex-center(column, center, center);
+    width: 100%;
+    height: 100vh;
+    button {
+      @include size-t;
+      padding: 6px 12px;
+      text-transform: uppercase;
+    }
+    p {
+      color: hsla(0, 0%, 100%, 0.502);
+      @include size-p;
+      max-width: 500px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    h2 {
+      @include h;
+      color: #c19f5f;
+    }
+    h1 {
+      @include h;
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+// secondsection
+.secondSection {
+  display: flex;
+  background-color: rgb(15, 14, 15);
+  padding: 48px 72px;
+  .productFeatures {
+    color: #fff;
+    margin-top: 48px;
+    padding: 0 12px;
+    width: calc(100% / 3);
+    h3 {
+      font-weight: 500;
+      font-size: 2.78vw;
+      line-height: 48px;
+      span {
+        color: #c19f5f;
+      }
+    }
+    p {
+      color: hsla(0, 0%, 100%, 0.502);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+    }
+    h5 {
+      @include size-p;
+    }
+    button {
+      background-color: transparent;
+      border: none;
+      color: #c19f5f;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 1.5rem;
+      font-weight: 400;
+      line-height: 18px;
+    }
+  }
+  ul {
+    margin-top: 48px;
+    padding: 0 12px;
+    width: calc(100% / 3);
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 32px;
+      h5 {
+        color: rgb(255, 255, 255);
+        @include size-p;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 18px;
+        @include p;
+      }
+      &::before {
+        @include generalStyle;
+        top: 50%;
+        width: 24px;
+        height: 24px;
+        transform: translateY(-50%);
+      }
+    }
+
+    li:nth-child(1)::before {
+      background-image: url("../img/leaf-solid.svg");
+    }
+
+    li:nth-child(2) {
+      margin: 24px 0;
+    }
+
+    li:nth-child(2)::before {
+      background-image: url("../img/gift-solid.svg");
+    }
+
+    li:nth-child(3)::before {
+      background-image: url("../img/bars-solid.svg");
+    }
+  }
+
+  figure {
+    width: calc(100% / 3);
+    height: 24.6vw;
+  }
+}
+// thirdsection
+.WhatMakesUsSpecial {
+  background: linear-gradient(#00000080, rgba(0, 0, 0, 0.5)),
+    url("../img/parallax_02.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    font-weight: 500;
+    font-size: 6.2vw;
+    color: #ffffff;
+    line-height: 108px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    span {
+      color: #c19f5f;
+    }
+  }
+  .square {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #c19f5f;
+    transform: translate(-50%, -50%);
+    animation: rotate-center 16s linear infinite;
+  }
+}
+@keyframes rotate-center {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+// 4basliq
+.OnlineStore {
+  background-color: rgb(15, 14, 15);
+  .textDiscover {
+    text-align: center;
+    padding-top: 48px;
+    p {
+      margin-bottom: 16px;
+      font-weight: 400;
+      font-size: 13px;
+      color: #c19f5f;
+      line-height: 19.5px;
+      letter-spacing: 2px;
+    }
+    h1 {
+      font-weight: 500;
+      font-size: 55px;
+      color: #ffffff;
+      line-height: 66px;
+      margin-bottom: 8px;
+    }
+  }
+  .cardForCandy {
+    .noSlider {
+      padding: 48px 72px;
+      display: flex;
+      gap: 48px;
+      .candyBox {
+        width: calc((100% - 144px) / 4);
+        margin-top: 48px;
+        .boxWrp {
+          position: relative;
+          @include flex-center(column, center, center);
+          .square {
+            background-image: url("../img/download.png");
+            width: 20vw;
+            height: 20vw;
+            background-repeat: no-repeat;
+            background-size: 170%;
+            position: absolute;
+            border-radius: 50%;
+            top: 0;
+            z-index: 3;
+            animation: rotate 15s linear infinite;
+            &:hover + button {
+              opacity: 1;
+              transform: translateY(0); /* Button should slide from below */
+            }
+          }
+          figure {
+            width: 77%;
+            height: 67%;
+            @include flex-center(row, center, center);
+            img {
+              z-index: 4;
+            }
+          }
+
+          button {
+            font-size: 10px;
+            color: #c19f5f;
+            line-height: 15px;
+            letter-spacing: 1px;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 50px;
+            width: 170px;
+            border: 1px solid rgb(193, 159, 95);
+            border-radius: 40px;
+            position: absolute;
+            top: 80%; /* Adjusted position */
+            left: 50%;
+            transform: translateX(-50%) translateY(30px); /* Initial off-screen position */
+            opacity: 0;
+            z-index: 5; /* Increased z-index */
+            transition: opacity 0.5s ease, transform 0.5s ease,
+              border-color 0.3s ease, color 0.3s ease;
+
+            &:hover {
+              border-color: #fff;
+              color: #fff;
+            }
+          }
+
+          &:hover button {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0); /* Button slides up */
+          }
+        }
+
+        h4 {
+          color: rgb(255, 255, 255);
+          margin-top: 10px;
+          font-size: 24px;
+          text-align: center;
+          line-height: 29px;
+          font-weight: 400;
+        }
+        p {
+          color: rgb(193, 159, 95);
+          margin: 8px 0 16px;
+          @include size-t;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .button {
+    button {
+      display: block;
+      margin: 24px auto 0;
+    }
+  }
+}
+// 5ci basliq
+.WatchVideo {
+  position: relative;
+  padding: 100px 91px;
+  background-color: rgb(15, 14, 15);
+  figure {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 50%
+        center / cover no-repeat fixed,
+      url("../img/video-bg.jpg");
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .textCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+      font-size: 6vw;
+      line-height: 108px;
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .buttonicon {
+      cursor: pointer;
+      border: 1px solid rgb(193, 159, 95);
+      padding: 30px 35px;
+      background-color: transparent;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+      img {
+        width: 23px;
+        height: 26px;
+      }
+    }
+  }
+}
+// 6ci basliq
+.Statistics {
+  text-align: center;
+  background-color: rgb(15, 14, 15);
+  padding: 50px 0;
+  color: #c19f5f;
+  @include flex-center(row, space-between, center);
+  .stat {
+    flex: 1;
+    padding: 0 20px;
+
+    h1 {
+      font-size: 60px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    p {
+      @include size-t;
+      color: #b0b0b0;
+    }
+
+    &:hover h1 {
+      transform: scale(1.1);
+    }
+  }
+}
+// 7ci basliq
+.gallery {
+  background: linear-gradient(rgba(15, 14, 15, 0.9), rgba(15, 14, 15, 0.9)),
+    url("../img/parallax_03.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 48px 0;
+  .textcenter {
+    text-align: center;
+    p {
+      @include size-t;
+      letter-spacing: 2px;
+      color: #c19f5f;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 40px;
+      line-height: 48px;
+      color: #fff;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+  }
+  &__box {
+    margin: 96px 0 48px;
+    gap: 48px;
+    @include flex-center;
+    div {
+      width: calc((100% - 343px) / 4);
+      position: relative;
+      figure {
+        overflow: hidden;
+      }
+      .square {
+        border: 1px solid #c19f5f;
+        height: 70%;
+        left: 15%;
+        position: absolute;
+        top: 15%;
+        transform: rotate(30deg);
+        transform: rotate(30deg);
+        transition: 0.3s;
+        width: 70%;
+        z-index: 59;
+      }
+      &:hover .square {
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform: rotate(0deg);
+        transform: rotate(0deg);
+        transition: 0.3s;
+        width: 100%;
+      }
+    }
+  }
+  button {
+    margin: 0 auto;
+    display: block;
+  }
+}

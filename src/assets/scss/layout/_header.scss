@@ -1,0 +1,27 @@
+.logo {
+  height: 64px;
+  width: 194px;
+}
+.menu {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+.header {
+  background: linear-gradient(0deg, transparent, rgba(6, 6, 6, 0.936) 50%);
+  padding: 1.5vw 4.2vw;
+  position: fixed;
+  top: 0;
+  z-index: 99000;
+  width: 100%;
+  @include flex-center(row,space-between,center);
+}
+.icons {
+  display: flex;
+  width: 18%;
+  figure {
+    width: 16px;
+    height: 16px;
+    margin: 4px 5px;
+  }
+}

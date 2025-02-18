@@ -1,0 +1,128 @@
+.firstComponent {
+  @include flex-center;
+  .centerText {
+    h1 {
+      font-size: 50px;
+    }
+    p {
+      padding: 24px 44px 0;
+      font-size: 16px;
+      span {
+        color: #c19f5f;
+      }
+    }
+  }
+}
+.about {
+  background-color: rgb(15, 14, 15);
+  .productFeatures {
+    p {
+      margin-bottom: 16px;
+    }
+  }
+  .box-wrp {
+    display: flex;
+    padding: 72px 60px;
+    .left,
+    .right {
+      width: 50%;
+    }
+    .left {
+      color: #fff;
+      margin-top: 48px;
+      padding: 0 12px;
+      h3 {
+        font-weight: 500;
+        font-size: 2.78vw;
+        line-height: 48px;
+        span {
+          color: #c19f5f;
+        }
+      }
+      p {
+        font-size: 18px;
+        @include p;
+      }
+      h5 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+      }
+      button {
+        font-size: 16px;
+        letter-spacing: 2px;
+        margin-top: 1.5rem;
+        font-weight: 400;
+        line-height: 18px;
+        &:hover {
+          border-color: rgb(255, 255, 255);
+        }
+      }
+    }
+    .right {
+      display: flex;
+      figure {
+        margin-top: 48px;
+        padding: 0 24px;
+
+        img {
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  .info {
+    padding: 0 60px 48px;
+    ul {
+      margin-top: 48px;
+      padding: 0 12px;
+      list-style: none;
+      @include flex-center(row, space-between, center);
+      li {
+        position: relative;
+        padding-left: 32px;
+        margin-left: 24px;
+        width: 300px;
+        h5 {
+          color: rgb(255, 255, 255);
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 24px;
+          margin-bottom: 8px;
+        }
+        p {
+          @include p;
+          font-size: 18px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          left: -24px;
+          top: 50%;
+          width: 40px;
+          height: 40px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          transform: translateY(-50%);
+        }
+      }
+
+      li:nth-child(1)::before {
+        background-image: url("../img/leaf-solid.svg");
+      }
+
+      li:nth-child(2)::before {
+        background-image: url("../img/gift-solid.svg");
+      }
+
+      li:nth-child(3)::before {
+        background-image: url("../img/bars-solid.svg");
+      }
+    }
+  }
+  .WhatMakesUsSpecial {
+    background: linear-gradient(#00000080, rgba(0, 0, 0, 0.5)),
+      url("../img/parallax_04.jpg");
+  }
+}

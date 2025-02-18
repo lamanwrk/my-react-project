@@ -1,0 +1,80 @@
+.footer {
+  background-image: url("../img/footer-bg-2.png");
+  padding: 100px 0 0;
+  background-color: rgb(18, 15, 16);
+  .top {
+    display: flex;
+    div {
+      padding: 0 24px;
+      width: calc(100% / 3);
+      margin-top: 48px;
+      figure {
+        width: 70%;
+      }
+      .icon {
+        display: flex;
+        width: 216px;
+        justify-content: space-between;
+        margin-top: 16px;
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        color: hsla(0, 0%, 100%, 0.75);
+      }
+      h1 {
+        font-weight: 500px;
+        font-size: 40px;
+        color: #c19f5f;
+        margin-bottom: 8px;
+      }
+      ul {
+        list-style: none;
+        li {
+          margin-top: 16px;
+          h6 {
+            font-size: 16px;
+            color: #c19f5f;
+            margin-bottom: 8px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    .middle {
+      li {
+        padding-left: 30px;
+        position: relative;
+        &:nth-child(1)::before {
+          background-image: url("../img/Phone.svg");
+          @include generalStyle;
+        }
+        &:nth-child(2)::before {
+          background-image: url("../img/Pin.svg");
+          @include generalStyle;
+        }
+        &:nth-child(3)::before {
+          background-image: url("../img/Message.svg");
+          @include generalStyle;
+        }
+      }
+    }
+  }
+  .below {
+    padding: 48px 0 16px;
+    p {
+      font-weight: 400;
+      text-align: center;
+      font-size: 16px;
+      color: #ffffff;
+      line-height: 24px;
+      span {
+        color: #c19f5f;
+      }
+    }
+  }
+}

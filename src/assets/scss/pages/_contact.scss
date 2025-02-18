@@ -1,0 +1,61 @@
+.contactUs {
+  input,
+  textarea {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+    padding: 6px 12px;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 20px;
+    font-family: "Cormorant";
+  }
+  input {
+    border-radius: 25px;
+    height: 70px;
+    width: 23.96vw;
+  }
+  textarea {
+    width: 50vw;
+    border-radius: 25px;
+    height: 200px;
+  }
+}
+.w-btn {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 72px 0 48px;
+  &:hover {
+    border-color: rgb(255, 255, 255);
+  }
+}
+.card-container {
+  background-color: rgb(15, 14, 15);
+  @include flex-center(row,space-between,center);
+  padding: 48px;
+  .card {
+    border-right: 1px dotted hsla(0, 0%, 100%, 0.502);
+    width: calc((100% - 144px) / 4);
+    text-align: center;
+    &:nth-child(4) {
+      border: none;
+    }
+    .icon {
+      color: #c19f5f;
+      width: 22px;
+      height: 30px;
+    }
+    h3 {
+      color: #fff;
+      font-size: 20px;
+      margin: 10px 0;
+      font-weight: 500;
+    }
+    p {
+      @include p;
+    }
+  }
+}
+//
