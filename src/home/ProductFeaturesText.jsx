@@ -1,3 +1,6 @@
+import { BsFiletypePdf } from "react-icons/bs";
+import { FaArrowRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const ProductFeaturesText = () => {
   return (
@@ -12,8 +15,10 @@ const ProductFeaturesText = () => {
       Curabitur tortor ante, vestibulum vel lacus id, semper malesuada sem.
       Sed sit amet tortor augue. Integer magna neque
     </p>
-    <h5> Download Price</h5>
-    <button className="generalButton">READ MORE </button>
+    <h5><BsFiletypePdf />
+        Download Price</h5>
+    <NavLink to="/about">READ MORE <FaArrowRight /></NavLink>
+    
   </div>
   )
 }

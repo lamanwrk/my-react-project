@@ -1,0 +1,30 @@
+.a{
+    background-color: #0f0E0f;
+        padding: 5vw;
+    .aboutshef {
+        
+      figure {
+        
+        margin-top: 3.34vw;
+        width: 100%;
+        height: 22vw;
+        img {
+          object-fit: cover;
+        }
+      }
+      h4{
+        font-weight: 500;
+        margin-bottom: 8px;
+        color: #fff;
+        font-size: 3.34vw;
+        line-height: 3.34vw;
+      }
+      p{
+        font-weight: 400;
+        margin-bottom: 16px;
+        font-size: 16px;
+        color: #878787;
+        font-family: 'system-ui';
+      }
+    }
+}

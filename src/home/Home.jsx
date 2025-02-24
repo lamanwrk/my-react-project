@@ -5,6 +5,7 @@ import OnlineStore from "../home/OnlineStore";
 import WatchVideo from "../home/WatchVideo";
 import Statistics from "../home/Statistics";
 import Gallery from "../home/Gallery";
+import OurMission from "./OurMission";
 
 const Home = () => {
   return (
@@ -15,7 +16,9 @@ const Home = () => {
             <OnlineStore />
             <WatchVideo />
             <Statistics />
+            <OurMission/>
             <Gallery />
+           
     </>
   )
 }

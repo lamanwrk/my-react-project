@@ -20,7 +20,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 @mixin size-t() {
-  font-size: 16px;
+  font-size: 1.112vw;
   line-height: 24px;
   font-weight: 400;
 }
@@ -31,6 +31,11 @@
 }
 @mixin h() {
   font-weight: 500;
-  line-height: 78px;
+  line-height: 4.42vw;
   font-size: 4.5vw;
+}
+@mixin macbookAir(){
+  @media (max-width:990px){
+    @content;
+  }
 }

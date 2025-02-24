@@ -3,11 +3,12 @@
   .centerText {
     h1 {
       font-size: 50px;
+      text-align: center;
     }
     p {
       padding: 24px 44px 0;
       font-size: 16px;
-      span {
+      a {
         color: #c19f5f;
       }
     }
@@ -22,7 +23,7 @@
   }
   .box-wrp {
     display: flex;
-    padding: 72px 60px;
+    padding: 5vw 4.17vw;
     .left,
     .right {
       width: 50%;
@@ -34,36 +35,40 @@
       h3 {
         font-weight: 500;
         font-size: 2.78vw;
-        line-height: 48px;
+        line-height: 3.34vw;
         span {
           color: #c19f5f;
         }
       }
       p {
-        font-size: 18px;
-        @include p;
+        color: hsla(0, 0%, 100%, 0.502);
+        font-weight: 400;
+        font-size: 1.25vw;
+        line-height: 27px;
       }
       h5 {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 24px;
+        @include size-p;
+        path{
+          fill: #c19f5f;
+        }
       }
-      button {
-        font-size: 16px;
+      a {
+        color: #c19f5f;
+        font-size: 12px;
         letter-spacing: 2px;
         margin-top: 1.5rem;
         font-weight: 400;
-        line-height: 18px;
-        &:hover {
-          border-color: rgb(255, 255, 255);
-        }
+        line-height: 1.25vw;
+        display: flex;
+        align-items: center;
+        text-decoration-line: none;
       }
     }
     .right {
       display: flex;
       figure {
-        margin-top: 48px;
-        padding: 0 24px;
+        margin-top: 3.34vw;
+        padding: 0 1.67vw;
 
         img {
           height: auto;
@@ -73,9 +78,9 @@
     }
   }
   .info {
-    padding: 0 60px 48px;
+    padding: 0 60px 3.34vw;
     ul {
-      margin-top: 48px;
+      margin-top: 3.34vw;
       padding: 0 12px;
       list-style: none;
       @include flex-center(row, space-between, center);
@@ -100,8 +105,8 @@
           position: absolute;
           left: -24px;
           top: 50%;
-          width: 40px;
-          height: 40px;
+          width: 2.78vw;
+          height: 2.78vw;
           background-size: contain;
           background-repeat: no-repeat;
           transform: translateY(-50%);
@@ -125,4 +130,39 @@
     background: linear-gradient(#00000080, rgba(0, 0, 0, 0.5)),
       url("../img/parallax_04.jpg");
   }
+}
+.textCenter {
+  text-align: center;
+  padding-top: 3.34vw;
+  p {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 0.903vw;
+    color: #c19f5f;
+    line-height: 1.3542vw;
+    letter-spacing: 2px;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 3.82vw;
+    color: #ffffff;
+    line-height: 4.589vw;
+    margin-bottom: 8px;
+  }
+}
+// team
+.ourTeam {
+  padding: 5vw;
+  display: flex;
+  justify-content: space-around;
+  figure {
+    width: 19.17vw;
+    height: 19.17vw;
+    figcaption {
+      color: #fff;
+    }
+  }
+}
+.button {
+  text-align: center;
 }

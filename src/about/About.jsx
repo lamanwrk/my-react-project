@@ -7,6 +7,7 @@ import ProductFeaturesText from "../home/ProductFeaturesText"
 import InfoProduct from "../product/InfoProduct"
 import img1 from "../assets/img/gallery-01-e1597251883779-360x360.jpg"
 import img2 from "../assets/img/gallery-02-480x480 (1).jpg"
+import OurTeam from "./OurTeam"
 function About() {
 
   return (
@@ -31,6 +32,7 @@ function About() {
       <WhatMakesUsSpecial/>
       <Statistics/>
       <WatchVideo/>
+      <OurTeam/>
     </div>
   )
 }

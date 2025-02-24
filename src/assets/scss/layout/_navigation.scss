@@ -16,4 +16,7 @@ nav {
       }
     }
   }
+  @include macbookAir{
+    display: none;
+  }
 }

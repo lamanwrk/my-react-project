@@ -1,24 +1,21 @@
-import { useState } from "react";
+import PropTypes from "prop-types";
 
-const AboutShef = () => {
-  const [product,setProduct]=useState([])
-  const shefList = () => {
-    fetch("https://api.escuelajs.co/api/v1/users")
-      .then((res) => res.json())
-      .then((json) => setProduct(json));
-  };
-  shefList();
+const AboutShef = (props) => {
   return (
-    <div>
-      <div className="aboutshef">
-        <figure>
-          <img src="" alt="" />
-        </figure>
-        <h4></h4>
-        <p></p>
-      </div>
+    <div className="aboutshef">
+      <figure>
+        <img src={props.avatar} alt={props.title} />
+      </figure>
+      <h4>{props.title}</h4>
+      <p>{props.description}</p>
     </div>
   );
+};
+
+AboutShef.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
 };
 
 export default AboutShef;

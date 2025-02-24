@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,10 +30,11 @@ span {
 .generalButton {
   border: 1px solid rgb(193, 159, 95);
   color: #c19f5f;
-  height: 70px;
+  height: 4.867vw;
   border-radius: 40px;
   background-color: transparent;
-  width: 220px;
+  width: 15.28vw;
+  font-size: 1.112vw;
 }
 
 .footer {
@@ -53,7 +55,7 @@ span {
 }
 .footer .top div .icon {
   display: flex;
-  width: 216px;
+  width: 15vw;
   justify-content: space-between;
   margin-top: 16px;
 }
@@ -140,12 +142,6 @@ span {
   width: 194px;
 }
 
-.menu {
-  width: 30px;
-  height: 30px;
-  display: none;
-}
-
 .header {
   background: linear-gradient(0deg, transparent, rgba(6, 6, 6, 0.936) 50%);
   padding: 1.5vw 4.2vw;
@@ -159,14 +155,103 @@ span {
   align-items: center;
 }
 
-.icons {
+div.icons {
   display: flex;
   width: 18%;
 }
-.icons figure {
+div.icons figure {
   width: 16px;
   height: 16px;
   margin: 4px 5px;
+}
+div.icons figure path {
+  fill: #c19f5f;
+}
+@media (max-width: 990px) {
+  div.icons {
+    display: none;
+  }
+}
+
+.menu .burger {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+@media (max-width: 990px) {
+  .menu .burger {
+    display: block;
+  }
+}
+.menu .logo {
+  display: none;
+}
+@media (max-width: 990px) {
+  .menu {
+    display: block;
+  }
+}
+.menu .logo {
+  display: none;
+}
+.menu .activeP {
+  display: block;
+  width: 87px;
+}
+.menu .ul ul {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  list-style: none;
+  width: 40vw;
+  right: 0;
+}
+.menu .ul .icons {
+  display: none;
+}
+.menu .show-menu {
+  display: none;
+  width: 40vw;
+  background-color: #0f0e0f;
+  top: 0;
+  position: absolute;
+  right: 0;
+  color: #c19f5f;
+  padding: 16px;
+}
+@media (max-width: 990px) {
+  .menu .show-menu {
+    display: block;
+  }
+}
+.menu .show-menu .activeP {
+  padding: 16px 0;
+  font-size: 20px;
+}
+.menu .show-menu div.activeIcons {
+  display: none;
+  justify-content: space-between;
+  width: calc(100% - 60px);
+}
+@media (max-width: 990px) {
+  .menu .show-menu div.activeIcons {
+    display: flex;
+  }
+}
+.menu .show-menu ul {
+  display: block !important;
+  list-style: none;
+  padding: 16px 0;
+}
+.menu .show-menu ul li {
+  padding: 8px 0;
+}
+.menu .show-menu ul li a {
+  color: #c19f5f;
+  text-decoration-line: none;
 }
 
 .firstComponent {
@@ -177,12 +262,13 @@ span {
 }
 .firstComponent .centerText h1 {
   font-size: 50px;
+  text-align: center;
 }
 .firstComponent .centerText p {
   padding: 24px 44px 0;
   font-size: 16px;
 }
-.firstComponent .centerText p span {
+.firstComponent .centerText p a {
   color: #c19f5f;
 }
 
@@ -194,7 +280,7 @@ span {
 }
 .about .box-wrp {
   display: flex;
-  padding: 72px 60px;
+  padding: 5vw 4.17vw;
 }
 .about .box-wrp .left,
 .about .box-wrp .right {
@@ -208,38 +294,42 @@ span {
 .about .box-wrp .left h3 {
   font-weight: 500;
   font-size: 2.78vw;
-  line-height: 48px;
+  line-height: 3.34vw;
 }
 .about .box-wrp .left h3 span {
   color: #c19f5f;
 }
 .about .box-wrp .left p {
-  font-size: 18px;
-  line-height: 27px;
+  color: hsla(0, 0%, 100%, 0.502);
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.25vw;
+  line-height: 27px;
 }
 .about .box-wrp .left h5 {
+  font-size: 1.4vw;
   font-weight: 500;
-  font-size: 20px;
   line-height: 24px;
 }
-.about .box-wrp .left button {
-  font-size: 16px;
+.about .box-wrp .left h5 path {
+  fill: #c19f5f;
+}
+.about .box-wrp .left a {
+  color: #c19f5f;
+  font-size: 12px;
   letter-spacing: 2px;
   margin-top: 1.5rem;
   font-weight: 400;
-  line-height: 18px;
-}
-.about .box-wrp .left button:hover {
-  border-color: rgb(255, 255, 255);
+  line-height: 1.25vw;
+  display: flex;
+  align-items: center;
+  text-decoration-line: none;
 }
 .about .box-wrp .right {
   display: flex;
 }
 .about .box-wrp .right figure {
-  margin-top: 48px;
-  padding: 0 24px;
+  margin-top: 3.34vw;
+  padding: 0 1.67vw;
 }
 .about .box-wrp .right figure img {
   height: auto;
@@ -247,10 +337,10 @@ span {
      object-fit: contain;
 }
 .about .info {
-  padding: 0 60px 48px;
+  padding: 0 60px 3.34vw;
 }
 .about .info ul {
-  margin-top: 48px;
+  margin-top: 3.34vw;
   padding: 0 12px;
   list-style: none;
   display: flex;
@@ -282,8 +372,8 @@ span {
   position: absolute;
   left: -24px;
   top: 50%;
-  width: 40px;
-  height: 40px;
+  width: 2.78vw;
+  height: 2.78vw;
   background-size: contain;
   background-repeat: no-repeat;
   transform: translateY(-50%);
@@ -299,6 +389,43 @@ span {
 }
 .about .WhatMakesUsSpecial {
   background: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5)), url("../img/parallax_04.jpg");
+}
+
+.textCenter {
+  text-align: center;
+  padding-top: 3.34vw;
+}
+.textCenter p {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 0.903vw;
+  color: #c19f5f;
+  line-height: 1.3542vw;
+  letter-spacing: 2px;
+}
+.textCenter h1 {
+  font-weight: 500;
+  font-size: 3.82vw;
+  color: #ffffff;
+  line-height: 4.589vw;
+  margin-bottom: 8px;
+}
+
+.ourTeam {
+  padding: 5vw;
+  display: flex;
+  justify-content: space-around;
+}
+.ourTeam figure {
+  width: 19.17vw;
+  height: 19.17vw;
+}
+.ourTeam figure figcaption {
+  color: #fff;
+}
+
+.button {
+  text-align: center;
 }
 
 nav {
@@ -319,6 +446,39 @@ nav ul a {
 }
 nav ul a.active {
   color: #c19f5f;
+}
+@media (max-width: 990px) {
+  nav {
+    display: none;
+  }
+}
+
+.a {
+  background-color: #0f0E0f;
+  padding: 5vw;
+}
+.a .aboutshef figure {
+  margin-top: 3.34vw;
+  width: 100%;
+  height: 22vw;
+}
+.a .aboutshef figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.a .aboutshef h4 {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 3.34vw;
+  line-height: 3.34vw;
+}
+.a .aboutshef p {
+  font-weight: 400;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #878787;
+  font-family: "system-ui";
 }
 
 .contactUs input,
@@ -404,13 +564,13 @@ nav ul a.active {
   position: absolute;
   top: 50vh;
   left: 21vw;
-  z-index: 100000;
+  z-index: 10;
 }
 .changeimg .right {
   position: absolute;
   top: 50vh;
   right: 21vw;
-  z-index: 100000;
+  z-index: 10;
 }
 .changeimg .text {
   position: absolute;
@@ -423,7 +583,7 @@ nav ul a.active {
   height: 100vh;
 }
 .changeimg .text button {
-  font-size: 16px;
+  font-size: 1.112vw;
   line-height: 24px;
   font-weight: 400;
   padding: 6px 12px;
@@ -440,32 +600,35 @@ nav ul a.active {
 }
 .changeimg .text h2 {
   font-weight: 500;
-  line-height: 78px;
+  line-height: 4.42vw;
   font-size: 4.5vw;
   color: #c19f5f;
 }
 .changeimg .text h1 {
   font-weight: 500;
-  line-height: 78px;
+  line-height: 4.42vw;
   font-size: 4.5vw;
   color: rgb(255, 255, 255);
 }
 
 .secondSection {
+  position: relative;
   display: flex;
+  justify-content: space-between;
   background-color: rgb(15, 14, 15);
-  padding: 48px 72px;
+  padding: 3.34vw 5vw;
 }
 .secondSection .productFeatures {
   color: #fff;
-  margin-top: 48px;
+  margin-top: 3.34vw;
   padding: 0 12px;
   width: 33.3333333333%;
+  z-index: 3;
 }
 .secondSection .productFeatures h3 {
   font-weight: 500;
   font-size: 2.78vw;
-  line-height: 48px;
+  line-height: 3.34vw;
 }
 .secondSection .productFeatures h3 span {
   color: #c19f5f;
@@ -473,7 +636,7 @@ nav ul a.active {
 .secondSection .productFeatures p {
   color: hsla(0, 0%, 100%, 0.502);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.25vw;
   line-height: 27px;
 }
 .secondSection .productFeatures h5 {
@@ -481,18 +644,23 @@ nav ul a.active {
   font-weight: 500;
   line-height: 24px;
 }
-.secondSection .productFeatures button {
-  background-color: transparent;
-  border: none;
+.secondSection .productFeatures h5 path {
+  fill: #c19f5f;
+}
+.secondSection .productFeatures a {
   color: #c19f5f;
   font-size: 12px;
   letter-spacing: 2px;
   margin-top: 1.5rem;
   font-weight: 400;
-  line-height: 18px;
+  line-height: 1.25vw;
+  display: flex;
+  align-items: center;
+  text-decoration-line: none;
 }
 .secondSection ul {
-  margin-top: 48px;
+  z-index: 3;
+  margin-top: 3.34vw;
   padding: 0 12px;
   width: 33.3333333333%;
   list-style: none;
@@ -509,7 +677,7 @@ nav ul a.active {
   margin-bottom: 8px;
 }
 .secondSection ul li p {
-  font-size: 18px;
+  font-size: 1.25vw;
   line-height: 27px;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
@@ -543,15 +711,16 @@ nav ul a.active {
 .secondSection figure {
   width: 33.3333333333%;
   height: 24.6vw;
+  position: absolute;
+  left: 33%;
+  z-index: 1;
 }
 
 .WhatMakesUsSpecial {
   background: linear-gradient(rgba(0, 0, 0, 0.5019607843), rgba(0, 0, 0, 0.5)), url("../img/parallax_02.jpg");
   position: relative;
-  background-size: cover;
-  background-position: center;
   width: 100%;
-  min-height: 500px;
+  min-height: 34.723vw;
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -561,7 +730,7 @@ nav ul a.active {
   font-weight: 500;
   font-size: 6.2vw;
   color: #ffffff;
-  line-height: 108px;
+  line-height: 7.5vw;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -575,8 +744,8 @@ nav ul a.active {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;
-  height: 300px;
+  width: 20.89vw;
+  height: 20.89vw;
   border: 1px solid #c19f5f;
   transform: translate(-50%, -50%);
   animation: rotate-center 16s linear infinite;
@@ -608,22 +777,22 @@ nav ul a.active {
 .OnlineStore .textDiscover p {
   margin-bottom: 16px;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 0.903vw;
   color: #c19f5f;
-  line-height: 19.5px;
+  line-height: 1.3542vw;
   letter-spacing: 2px;
 }
 .OnlineStore .textDiscover h1 {
   font-weight: 500;
-  font-size: 55px;
+  font-size: 3.82vw;
   color: #ffffff;
-  line-height: 66px;
+  line-height: 4.589vw;
   margin-bottom: 8px;
 }
 .OnlineStore .cardForCandy .noSlider {
-  padding: 48px 72px;
+  padding: 3.34vw 5vw;
   display: flex;
-  gap: 48px;
+  gap: 3.34vw;
 }
 .OnlineStore .cardForCandy .noSlider .candyBox {
   width: calc((100% - 144px) / 4);
@@ -669,56 +838,52 @@ nav ul a.active {
   line-height: 15px;
   letter-spacing: 1px;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 50px;
-  width: 170px;
+  height: 3.48vw;
+  width: 11.806vw;
   border: 1px solid rgb(193, 159, 95);
   border-radius: 40px;
   position: absolute;
-  top: 80%; /* Adjusted position */
+  top: 80%;
   left: 50%;
-  transform: translateX(-50%) translateY(30px); /* Initial off-screen position */
+  transform: translateX(-50%) translateY(40%); /* Ortada qalır və aşağıda gizlənir */
   opacity: 0;
-  z-index: 5; /* Increased z-index */
+  z-index: 5;
   transition: opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, color 0.3s ease;
-}
-.OnlineStore .cardForCandy .noSlider .candyBox .boxWrp button:hover {
-  border-color: #fff;
-  color: #fff;
 }
 .OnlineStore .cardForCandy .noSlider .candyBox .boxWrp:hover button {
   opacity: 1;
-  transform: translateX(-50%) translateY(0); /* Button slides up */
+  transform: translateX(-50%) translateY(0); /* Yalnız yuxarı çıxır */
 }
 .OnlineStore .cardForCandy .noSlider .candyBox h4 {
   color: rgb(255, 255, 255);
   margin-top: 10px;
-  font-size: 24px;
+  font-size: 1.67vw;
   text-align: center;
-  line-height: 29px;
+  line-height: 2.02vw;
   font-weight: 400;
 }
 .OnlineStore .cardForCandy .noSlider .candyBox p {
   color: rgb(193, 159, 95);
   margin: 8px 0 16px;
-  font-size: 16px;
+  font-size: 1.112vw;
   line-height: 24px;
   font-weight: 400;
   text-align: center;
 }
 .OnlineStore .button button {
   display: block;
-  margin: 24px auto 0;
+  margin: 1.67vw auto 0;
 }
 
 .WatchVideo {
   position: relative;
-  padding: 100px 91px;
+  padding: 6.95vw 6.32vw;
   background-color: rgb(15, 14, 15);
 }
 .WatchVideo figure {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 50% center/cover no-repeat fixed, url("../img/video-bg.jpg");
   width: 100%;
-  height: 400px;
+  height: 27.78vw;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -738,7 +903,7 @@ nav ul a.active {
 .WatchVideo .textCenter .buttonicon {
   cursor: pointer;
   border: 1px solid rgb(193, 159, 95);
-  padding: 30px 35px;
+  padding: 2.09vw 2.435vw;
   background-color: transparent;
   border-radius: 50%;
   display: block;
@@ -752,7 +917,7 @@ nav ul a.active {
 .Statistics {
   text-align: center;
   background-color: rgb(15, 14, 15);
-  padding: 50px 0;
+  padding: 3.48vw 0;
   color: #c19f5f;
   display: flex;
   flex-direction: row;
@@ -764,14 +929,14 @@ nav ul a.active {
   padding: 0 20px;
 }
 .Statistics .stat h1 {
-  font-size: 60px;
+  font-size: 4.17vw;
   font-weight: 500;
   margin-bottom: 10px;
   color: #fff;
   transition: transform 0.3s ease-in-out;
 }
 .Statistics .stat p {
-  font-size: 16px;
+  font-size: 1.112vw;
   line-height: 24px;
   font-weight: 400;
   color: #b0b0b0;
@@ -784,13 +949,13 @@ nav ul a.active {
   background: linear-gradient(rgba(15, 14, 15, 0.9), rgba(15, 14, 15, 0.9)), url("../img/parallax_03.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 48px 0;
+  padding: 3.34vw 0;
 }
 .gallery .textcenter {
   text-align: center;
 }
 .gallery .textcenter p {
-  font-size: 16px;
+  font-size: 1.112vw;
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 2px;
@@ -798,22 +963,22 @@ nav ul a.active {
   margin-bottom: 16px;
 }
 .gallery .textcenter h1 {
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 2.78vw;
+  line-height: 3.34vw;
   color: #fff;
   font-weight: 500;
   margin-bottom: 8px;
 }
 .gallery__box {
-  margin: 96px 0 48px;
-  gap: 48px;
+  margin: 6.67vw 0 3.34vw;
+  gap: 3.34vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .gallery__box div {
-  width: calc((100% - 343px) / 4);
+  width: calc((100% - 23.82vw) / 4);
   position: relative;
 }
 .gallery__box div figure {
@@ -843,6 +1008,49 @@ nav ul a.active {
 .gallery button {
   margin: 0 auto;
   display: block;
+}
+
+.leftRight {
+  display: flex;
+  background-color: #212529;
+}
+.leftRight figure {
+  width: 50%;
+}
+
+.textPA,
+.textPA ~ figure {
+  position: absolute;
+  top: 0;
+}
+
+.textPA {
+  top: 20%;
+  left: 60%;
+  z-index: 11;
+  width: 30%;
+  color: rgb(255, 255, 255);
+}
+.textPA p {
+  color: rgb(193, 159, 95);
+  font-size: 1vw;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.textPA h1 {
+  font-weight: 500;
+  font-size: 3.13vw;
+}
+.textPA h5 {
+  font-size: 1.74vw;
+  font-weight: 500;
+  margin: 50px 0 8px;
+}
+.textPA h6 {
+  font-size: 0.84vw;
+  font-weight: 500;
+  color: rgb(193, 159, 95);
+  letter-spacing: 4px;
 }
 
 .products__item img {

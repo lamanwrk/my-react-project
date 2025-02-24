@@ -11,13 +11,13 @@
     position: absolute;
     top: calc(100vh / 2);
     left: 21vw;
-    z-index: 100000;
+    z-index: 10;
   }
   .right {
     position: absolute;
     top: calc(100vh / 2);
     right: 21vw;
-    z-index: 100000;
+    z-index: 10;
   }
   .text {
     position: absolute;
@@ -49,18 +49,21 @@
 }
 // secondsection
 .secondSection {
+  position: relative;
   display: flex;
+  justify-content: space-between;
   background-color: rgb(15, 14, 15);
-  padding: 48px 72px;
+  padding: 3.34vw 5vw;
   .productFeatures {
     color: #fff;
-    margin-top: 48px;
+    margin-top: 3.34vw;
     padding: 0 12px;
     width: calc(100% / 3);
+    z-index: 3;
     h3 {
       font-weight: 500;
       font-size: 2.78vw;
-      line-height: 48px;
+      line-height: 3.34vw;
       span {
         color: #c19f5f;
       }
@@ -68,25 +71,30 @@
     p {
       color: hsla(0, 0%, 100%, 0.502);
       font-weight: 400;
-      font-size: 18px;
+      font-size: 1.25vw;
       line-height: 27px;
     }
     h5 {
       @include size-p;
+      path{
+        fill: #c19f5f;
+      }
     }
-    button {
-      background-color: transparent;
-      border: none;
+    a {
       color: #c19f5f;
       font-size: 12px;
       letter-spacing: 2px;
       margin-top: 1.5rem;
       font-weight: 400;
-      line-height: 18px;
+      line-height: 1.25vw;
+      display: flex;
+      align-items: center;
+      text-decoration-line: none;
     }
   }
   ul {
-    margin-top: 48px;
+    z-index: 3;
+    margin-top: 3.34vw;
     padding: 0 12px;
     width: calc(100% / 3);
     list-style: none;
@@ -100,7 +108,7 @@
         margin-bottom: 8px;
       }
       p {
-        font-size: 18px;
+        font-size: 1.25vw;
         @include p;
       }
       &::before {
@@ -132,6 +140,9 @@
   figure {
     width: calc(100% / 3);
     height: 24.6vw;
+    position: absolute;
+    left: 33%;
+    z-index: 1;
   }
 }
 // thirdsection
@@ -139,10 +150,8 @@
   background: linear-gradient(#00000080, rgba(0, 0, 0, 0.5)),
     url("../img/parallax_02.jpg");
   position: relative;
-  background-size: cover;
-  background-position: center;
   width: 100%;
-  min-height: 500px;
+  min-height: 34.723vw;
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: no-repeat;
@@ -151,7 +160,7 @@
     font-weight: 500;
     font-size: 6.2vw;
     color: #ffffff;
-    line-height: 108px;
+    line-height: 7.5vw;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -165,8 +174,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 300px;
-    height: 300px;
+    width: 20.89vw;
+    height: 20.89vw;
     border: 1px solid #c19f5f;
     transform: translate(-50%, -50%);
     animation: rotate-center 16s linear infinite;
@@ -197,24 +206,24 @@
     p {
       margin-bottom: 16px;
       font-weight: 400;
-      font-size: 13px;
+      font-size: 0.903vw;
       color: #c19f5f;
-      line-height: 19.5px;
+      line-height: 1.3542vw;
       letter-spacing: 2px;
     }
     h1 {
       font-weight: 500;
-      font-size: 55px;
+      font-size: 3.82vw;
       color: #ffffff;
-      line-height: 66px;
+      line-height: 4.589vw;
       margin-bottom: 8px;
     }
   }
   .cardForCandy {
     .noSlider {
-      padding: 48px 72px;
+      padding: 3.34vw 5vw;
       display: flex;
-      gap: 48px;
+      gap: 3.34vw;
       .candyBox {
         width: calc((100% - 144px) / 4);
         margin-top: 48px;
@@ -252,37 +261,33 @@
             line-height: 15px;
             letter-spacing: 1px;
             background-color: rgba(0, 0, 0, 0.5);
-            height: 50px;
-            width: 170px;
+            height: 3.48vw;
+            width: 11.806vw;
             border: 1px solid rgb(193, 159, 95);
             border-radius: 40px;
             position: absolute;
-            top: 80%; /* Adjusted position */
+            top: 80%;
             left: 50%;
-            transform: translateX(-50%) translateY(30px); /* Initial off-screen position */
+            transform: translateX(-50%) translateY(40%); /* Ortada qalır və aşağıda gizlənir */
             opacity: 0;
-            z-index: 5; /* Increased z-index */
+            z-index: 5;
             transition: opacity 0.5s ease, transform 0.5s ease,
               border-color 0.3s ease, color 0.3s ease;
-
-            &:hover {
-              border-color: #fff;
-              color: #fff;
-            }
           }
-
+          
           &:hover button {
             opacity: 1;
-            transform: translateX(-50%) translateY(0); /* Button slides up */
+            transform: translateX(-50%) translateY(0); /* Yalnız yuxarı çıxır */
           }
+          
         }
 
         h4 {
           color: rgb(255, 255, 255);
           margin-top: 10px;
-          font-size: 24px;
+          font-size: 1.67vw;
           text-align: center;
-          line-height: 29px;
+          line-height: 2.02vw;
           font-weight: 400;
         }
         p {
@@ -297,21 +302,21 @@
   .button {
     button {
       display: block;
-      margin: 24px auto 0;
+      margin: 1.67vw auto 0;
     }
   }
 }
 // 5ci basliq
 .WatchVideo {
   position: relative;
-  padding: 100px 91px;
+  padding: 6.95vw 6.32vw;
   background-color: rgb(15, 14, 15);
   figure {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) 50%
         center / cover no-repeat fixed,
       url("../img/video-bg.jpg");
     width: 100%;
-    height: 400px;
+    height: 27.78vw;
     background-size: cover;
     background-attachment: fixed;
   }
@@ -330,7 +335,7 @@
     .buttonicon {
       cursor: pointer;
       border: 1px solid rgb(193, 159, 95);
-      padding: 30px 35px;
+      padding: 2.09vw 2.435vw;
       background-color: transparent;
       border-radius: 50%;
       display: block;
@@ -346,15 +351,14 @@
 .Statistics {
   text-align: center;
   background-color: rgb(15, 14, 15);
-  padding: 50px 0;
+  padding: 3.48vw 0;
   color: #c19f5f;
   @include flex-center(row, space-between, center);
   .stat {
     flex: 1;
     padding: 0 20px;
-
     h1 {
-      font-size: 60px;
+      font-size: 4.17vw;
       font-weight: 500;
       margin-bottom: 10px;
       color: #fff;
@@ -377,7 +381,7 @@
     url("../img/parallax_03.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 48px 0;
+  padding: 3.34vw 0;
   .textcenter {
     text-align: center;
     p {
@@ -387,19 +391,19 @@
       margin-bottom: 16px;
     }
     h1 {
-      font-size: 40px;
-      line-height: 48px;
+      font-size: 2.78vw;
+      line-height: 3.34vw;
       color: #fff;
       font-weight: 500;
       margin-bottom: 8px;
     }
   }
   &__box {
-    margin: 96px 0 48px;
-    gap: 48px;
+    margin: 6.67vw 0 3.34vw;
+    gap: 3.34vw;
     @include flex-center;
     div {
-      width: calc((100% - 343px) / 4);
+      width: calc((100% - 23.82vw) / 4);
       position: relative;
       figure {
         overflow: hidden;
@@ -430,5 +434,50 @@
   button {
     margin: 0 auto;
     display: block;
+  }
+}
+// our mission
+.leftRight {
+  display: flex;
+  background-color: #212529;
+
+  figure {
+    width: 50%;
+  }
+}
+.textPA,
+.textPA ~ figure {
+  position: absolute;
+  top: 0;
+}
+.textPA {
+  top: 20%;
+  left: 60%;
+  z-index: 11;
+  width: 30%;
+  color: rgb(255, 255, 255);
+  p {
+    color: rgb(193, 159, 95);
+    font-size: 1vw;
+    font-weight: 400;
+margin-bottom: 16px;
+  }
+  h1 {
+    font-weight: 500;
+
+    font-size: 3.13vw;
+  }
+  h5{
+    font-size: 1.74vw;
+    font-weight: 500;
+    margin: 50px 0 8px;
+
+  }
+  h6{
+    font-size: 0.84vw;
+    font-weight: 500;
+
+    color: rgb(193, 159, 95);
+letter-spacing: 4px;
   }
 }
