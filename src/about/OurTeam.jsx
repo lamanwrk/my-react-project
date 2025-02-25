@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 import OurTeamItem from "./OurTeamItem"
 
 const OurTeam = () => {
@@ -14,7 +15,7 @@ const OurTeam = () => {
       <OurTeamItem/>
     </div>
     <div className="button">
-    <button className="generalButton">READ MORE</button>
+    <NavLink to="/blog" ><button className="generalButton">READ MORE</button></NavLink>
 
     </div>
     </div>

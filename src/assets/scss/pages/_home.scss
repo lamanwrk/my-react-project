@@ -25,11 +25,13 @@
     @include flex-center(column, center, center);
     width: 100%;
     height: 100vh;
+   a{
     button {
       @include size-t;
       padding: 6px 12px;
       text-transform: uppercase;
     }
+   }
     p {
       color: hsla(0, 0%, 100%, 0.502);
       @include size-p;
